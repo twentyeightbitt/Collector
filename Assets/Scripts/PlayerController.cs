@@ -1,12 +1,15 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     public int speed = 20;
+    public TextMeshProUGUI gameOverText;
     private float _vertical;
     private float _horizontal;
     //public int force = 10;
-    public int coins = 0;
+    //public int coins = 0;
     public float jumpForce = 5f;
     private Rigidbody rb;
     private bool isGrounded = true;
@@ -46,13 +49,14 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true; 
+            isGrounded = true;
         }
         if (collision.gameObject.CompareTag("GarbageCollector"))
         {
             isGameOver = true;
             Time.timeScale = 0;
             Debug.Log("Вы проиграли");
+
         }
     }
 }

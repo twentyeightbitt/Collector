@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ground
   - GarbageCollector
+  - Coin
+  - Enemy
+  - Start
+  - Lava
+  - Portal
   layers:
   - Default
   - TransparentFX
